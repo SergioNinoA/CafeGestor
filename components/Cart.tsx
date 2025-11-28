@@ -12,6 +12,11 @@ interface CartProps {
 const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear }) => {
   const total = items.reduce((acc, item) => acc + (item.producto.precio * item.cantidad), 0);
 
+  // Función auxiliar para formatear precios inteligentemente
+  const formatPrice = (price: number) => {
+    return price.toLocaleString('es-CO', { maximumFractionDigits: 2 });
+  };
+
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-64 text-slate-400">
@@ -43,7 +48,7 @@ const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear 
             <div className="flex-1">
               <h4 className="font-medium text-slate-800 text-sm">{item.producto.nombre}</h4>
               <p className="text-xs text-slate-500">
-                {item.producto.codigo || 'S/C'} — ${item.producto.precio.toFixed(2)} c/u
+                {item.producto.codigo || 'S/C'} — ${formatPrice(item.producto.precio)} c/u
               </p>
             </div>
             
@@ -64,9 +69,9 @@ const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear 
                   <Plus size={14} />
                 </button>
               </div>
-              <div className="text-right w-16">
+              <div className="text-right w-20">
                 <div className="font-bold text-sm text-slate-900">
-                  ${(item.producto.precio * item.cantidad).toFixed(2)}
+                  ${formatPrice(item.producto.precio * item.cantidad)}
                 </div>
               </div>
               <button 
@@ -83,15 +88,15 @@ const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear 
       <div className="p-4 bg-slate-900 text-white">
         <div className="flex justify-between items-center mb-1 text-slate-300 text-sm">
           <span>Subtotal</span>
-          <span>${total.toFixed(2)}</span>
+          <span>${formatPrice(total)}</span>
         </div>
         <div className="flex justify-between items-center mb-4 text-slate-300 text-sm">
           <span>Impuestos (0%)</span>
-          <span>$0.00</span>
+          <span>$0</span>
         </div>
         <div className="flex justify-between items-center pt-4 border-t border-slate-700">
           <span className="text-lg font-bold">Total a Pagar</span>
-          <span className="text-2xl font-bold text-amber-400">${total.toFixed(2)}</span>
+          <span className="text-2xl font-bold text-amber-400">${formatPrice(total)}</span>
         </div>
         <button className="w-full mt-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-4 rounded-lg transition-colors">
           Cobrar Pedido

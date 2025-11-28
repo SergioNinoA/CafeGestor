@@ -10,6 +10,11 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ producto, onAdd, onEdit, onDelete }) => {
+  // Función para formatear precios: muestra decimales solo si existen
+  const formatPrice = (price: number) => {
+    return price.toLocaleString('es-CO', { maximumFractionDigits: 2 });
+  };
+
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 flex flex-col justify-between hover:shadow-md transition-shadow relative group">
       <div>
@@ -48,7 +53,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, onAdd, onEdit, onDe
       </div>
 
       <div className="flex items-center justify-between mt-auto pt-3 border-t border-slate-100">
-        <span className="text-xl font-bold text-slate-900">${producto.precio.toFixed(2)}</span>
+        <span className="text-xl font-bold text-slate-900">${formatPrice(producto.precio)}</span>
         <button 
           onClick={() => onAdd(producto)}
           className="bg-slate-900 hover:bg-slate-800 text-white p-2 rounded-lg flex items-center transition-colors active:scale-95"
