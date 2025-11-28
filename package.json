@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp productos.json dist/ && cp manifest.json dist/ && cp sw.js dist/",
+    "build": "tsc && vite build && cp productos.json dist/",
     "preview": "vite preview"
   },
   "dependencies": {
