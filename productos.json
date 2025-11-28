@@ -473,10 +473,10 @@
   },
   {
     "id": "61",
-    "nombre": "Sandwich J y Q",
+    "nombre": "Sándwich J y Q",
     "precio": 8700,
     "codigo": "",
-    "categoria": "Pastelería",
+    "categoria": "Sándwich",
     "descripcion": ""
   },
   {
@@ -609,10 +609,10 @@
   },
   {
     "id": "78",
-    "nombre": "Sandwich J y P",
+    "nombre": "Sándwich J y P",
     "precio": 6500,
     "codigo": "",
-    "categoria": "Pastelería",
+    "categoria": "Sándwich",
     "descripcion": ""
   },
   {
