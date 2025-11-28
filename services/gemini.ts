@@ -1,10 +1,31 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { CategoriaProducto, SuggestionResponse } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Inicialización perezosa (Lazy initialization)
+// Esto evita que la aplicación se rompa al cargar si la API KEY no está configurada
+let aiClient: GoogleGenAI | null = null;
+
+const getAiClient = () => {
+  if (!aiClient) {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey || apiKey === "undefined" || apiKey === "") {
+      console.warn("API Key de Gemini no configurada.");
+      return null;
+    }
+    aiClient = new GoogleGenAI({ apiKey });
+  }
+  return aiClient;
+};
 
 export const generarDatosProducto = async (nombreProducto: string): Promise<SuggestionResponse | null> => {
   try {
+    const ai = getAiClient();
+    
+    if (!ai) {
+      alert("La funcionalidad de IA requiere una API KEY configurada en el servidor.");
+      return null;
+    }
+
     const prompt = `Genera datos realistas para un producto de cafetería llamado "${nombreProducto}". 
     Estima un precio en USD, inventa un código de producto corto (ej: CAF-01) y una descripción breve y apetitosa en español.
     Clasifícalo en una de las siguientes categorías: Café, Pastelería, Bebida Fría, Sándwich, Otro.`;

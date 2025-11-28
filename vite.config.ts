@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Carga las variables de entorno basándose en el modo actual (development/production)
-  // El tercer argumento '' permite cargar todas las variables, no solo las que empiezan por VITE_
-  const env = loadEnv(mode, (process as any).cwd(), '');
+  // Carga las variables de entorno
+  // El tercer argumento '' permite cargar todas las variables del sistema
+  const env = loadEnv(mode, process.cwd(), '');
 
   return {
     plugins: [react()],
@@ -15,8 +15,10 @@ export default defineConfig(({ mode }) => {
       sourcemap: false
     },
     define: {
-      // Esto reemplaza process.env.API_KEY en el código del cliente con el valor real
-      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+      // Define process.env como objeto vacío para evitar errores "process is not defined" en navegador
+      'process.env': {},
+      // Inyecta la API KEY de forma segura. Si no existe, usa string vacío.
+      'process.env.API_KEY': JSON.stringify(env.API_KEY || '')
     }
   };
 });
