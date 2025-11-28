@@ -1,0 +1,5 @@
+{
+  "name": "CaféGestor",
+  "description": "Sistema de punto de venta y gestión de inventario para cafeterías con asistente IA.",
+  "requestFramePermissions": []
+}

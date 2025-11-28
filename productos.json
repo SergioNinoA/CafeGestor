@@ -1,0 +1,7 @@
+[
+  { "id": "1", "nombre": "Café Americano", "precio": 4300, "codigo": "CAF-001", "categoria": "Café", "descripcion": "Espresso diluido en agua caliente." },
+  { "id": "2", "nombre": "Cappuccino", "precio": 5500, "codigo": "CAF-002", "categoria": "Café", "descripcion": "Espresso con leche vaporizada y espuma." },
+  { "id": "3", "nombre": "Latte", "precio": 5500, "codigo": "CAF-003", "categoria": "Café", "descripcion": "Espresso con mucha leche vaporizada." },
+  { "id": "4", "nombre": "Jugo de Naranja", "precio": 6000, "categoria": "Bebida Fría", "descripcion": "Jugo natural exprimido al momento." },
+  { "id": "5", "nombre": "Croissant", "precio": 4500, "codigo": "PAS-101", "categoria": "Pastelería", "descripcion": "Cruasán de mantequilla." }
+]
