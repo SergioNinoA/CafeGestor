@@ -9,7 +9,7 @@ const App: React.FC = () => {
   // Estado de Productos
   const [productos, setProductos] = useState<Producto[]>(() => {
     const saved = localStorage.getItem('cafe_productos');
-    // Si hay datos guardados, los usamos. Si no, iniciamos vacío y dejamos que useEffect cargue el JSON.
+    // Iniciamos con lo guardado para renderizado inmediato, pero el useEffect actualizará con el JSON
     return saved ? JSON.parse(saved) : [];
   });
 
@@ -28,33 +28,60 @@ const App: React.FC = () => {
   
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Cargar datos desde JSON externo si no hay datos en localStorage
+  // Cargar datos desde JSON externo SIEMPRE para asegurar actualización
   useEffect(() => {
-    const saved = localStorage.getItem('cafe_productos');
-    if (!saved || JSON.parse(saved).length === 0) {
-      fetch('./productos.json')
-        .then(response => {
-          if (!response.ok) throw new Error('No se pudo cargar el archivo de productos');
-          return response.json();
-        })
-        .then(data => {
-          setProductos(data);
-        })
-        .catch(error => console.error('Error cargando productos iniciales:', error));
-    }
+    fetch('./productos.json')
+      .then(response => {
+        if (!response.ok) throw new Error('No se pudo cargar el archivo de productos');
+        return response.json();
+      })
+      .then((productosDelArchivo: Producto[]) => {
+        // LÓGICA DE SINCRONIZACIÓN:
+        // 1. El archivo JSON es la autoridad (Source of Truth).
+        // 2. Conservamos productos locales SOLO si son nuevos (IDs que no están en el JSON).
+        
+        const saved = localStorage.getItem('cafe_productos');
+        let productosFinales = [...productosDelArchivo];
+
+        if (saved) {
+          try {
+            const productosLocales: Producto[] = JSON.parse(saved);
+            
+            // Encontramos productos que creó el usuario localmente (ID no existe en el archivo)
+            const productosSoloLocales = productosLocales.filter(local => 
+              !productosDelArchivo.some(archivo => archivo.id === local.id)
+            );
+
+            // Los agregamos a la lista oficial
+            if (productosSoloLocales.length > 0) {
+              productosFinales = [...productosFinales, ...productosSoloLocales];
+            }
+          } catch (e) {
+            console.error("Error procesando caché local", e);
+          }
+        }
+
+        setProductos(productosFinales);
+        // Actualizamos localStorage para la próxima vez
+        localStorage.setItem('cafe_productos', JSON.stringify(productosFinales));
+      })
+      .catch(error => {
+        console.error('Error cargando productos iniciales:', error);
+        // Si falla la carga (ej. offline y sin caché), no hacemos nada y dejamos lo que haya en el state
+      });
   }, []);
 
-  // Persistencia
+  // Persistencia del Carrito (Productos ya se persiste en el useEffect de carga y al modificar)
   useEffect(() => {
-    // Guardamos en localStorage cada vez que productos cambia
+    localStorage.setItem('cafe_carrito', JSON.stringify(carrito));
+  }, [carrito]);
+
+  // Persistencia de Productos (solo cuando agregamos/editamos manualmente)
+  useEffect(() => {
     if (productos.length > 0) {
       localStorage.setItem('cafe_productos', JSON.stringify(productos));
     }
   }, [productos]);
-
-  useEffect(() => {
-    localStorage.setItem('cafe_carrito', JSON.stringify(carrito));
-  }, [carrito]);
 
   // Lógica de Carrito
   const agregarAlCarrito = (producto: Producto) => {
