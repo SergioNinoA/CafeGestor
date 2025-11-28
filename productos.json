@@ -1,7 +1,922 @@
 [
-  { "id": "1", "nombre": "Café Americano", "precio": 4300, "codigo": "CAF-001", "categoria": "Café", "descripcion": "Espresso diluido en agua caliente." },
-  { "id": "2", "nombre": "Cappuccino", "precio": 5500, "codigo": "CAF-002", "categoria": "Café", "descripcion": "Espresso con leche vaporizada y espuma." },
-  { "id": "3", "nombre": "Latte", "precio": 5500, "codigo": "CAF-003", "categoria": "Café", "descripcion": "Espresso con mucha leche vaporizada." },
-  { "id": "4", "nombre": "Jugo de Naranja", "precio": 6000, "categoria": "Bebida Fría", "descripcion": "Jugo natural exprimido al momento." },
-  { "id": "5", "nombre": "Croissant", "precio": 4500, "codigo": "PAS-101", "categoria": "Pastelería", "descripcion": "Cruasán de mantequilla." }
+  {
+    "id": "1",
+    "nombre": "Café Americano",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": "Espresso diluido en agua caliente"
+  },
+  {
+    "id": "2",
+    "nombre": "Cappuccino",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": "Espresso con leche vaporizada y espuma"
+  },
+  {
+    "id": "3",
+    "nombre": "Latte",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "4",
+    "nombre": "Jugo de Naranja",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": "Jugo natural exprimido al momento"
+  },
+  {
+    "id": "5",
+    "nombre": "Ponqué 1/8",
+    "precio": 36200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "6",
+    "nombre": "Ponqué 1/4",
+    "precio": 64700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "7",
+    "nombre": "Ponqué 1/2",
+    "precio": 97100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "8",
+    "nombre": "Ponqué 3/4",
+    "precio": 122600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "9",
+    "nombre": "Ponqué 1 LB",
+    "precio": 155000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "10",
+    "nombre": "Pastillaje 1/4",
+    "precio": 82200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "11",
+    "nombre": "Pastillaje 1/2",
+    "precio": 119900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "12",
+    "nombre": "Pastillaje 3/4",
+    "precio": 154400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "13",
+    "nombre": "Pastillaje 1 LB",
+    "precio": 198800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "14",
+    "nombre": "Ciruela 1/8",
+    "precio": 25000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "15",
+    "nombre": "Ciruela 1/4",
+    "precio": 49800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "17",
+    "nombre": "Ciruela 1/2",
+    "precio": 98400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "18",
+    "nombre": "Ciruela 3/4",
+    "precio": 100900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "19",
+    "nombre": "Ciruela 1 LB",
+    "precio": 144500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "20",
+    "nombre": "Tres Leches 1/8",
+    "precio": 31900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "21",
+    "nombre": "Tres Leches 1/4",
+    "precio": 52700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "22",
+    "nombre": "Tres Leches 1/2",
+    "precio": 64700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "23",
+    "nombre": "Tres Leches 3/4",
+    "precio": 90800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "24",
+    "nombre": "Tres Leches 1 LB",
+    "precio": 131400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "25",
+    "nombre": "Fresa y Mel 1/8",
+    "precio": 30600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "26",
+    "nombre": "Fresa y Mel 1/4",
+    "precio": 42600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "27",
+    "nombre": "Fresa y Mel 1/2",
+    "precio": 65700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "28",
+    "nombre": "Fresa y Mel 3/4",
+    "precio": 85100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "29",
+    "nombre": "Fresa y Mel 1 LB",
+    "precio": 107000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "30",
+    "nombre": "Tres Leches Richs 1/8",
+    "precio": 32700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "31",
+    "nombre": "Tres Leches Richs 1/4",
+    "precio": 53700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "32",
+    "nombre": "Tres Leches Richs 1/2",
+    "precio": 77800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "33",
+    "nombre": "Tres Leches Richs 3/4",
+    "precio": 100900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "34",
+    "nombre": "Tres Leches Richs 1 LB",
+    "precio": 144500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "35",
+    "nombre": "Cake Chocolate 1/8",
+    "precio": 30800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "36",
+    "nombre": "Cake Chocolate 1/4",
+    "precio": 48600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "37",
+    "nombre": "Cake Chocolate 1/2",
+    "precio": 72600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "38",
+    "nombre": "Cake Chocolate 3/4",
+    "precio": 96300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "39",
+    "nombre": "Cake Chocolate 1 LB",
+    "precio": 120400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "40",
+    "nombre": "Selva Negra 1/2",
+    "precio": 80900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "41",
+    "nombre": "Amapola 1/4",
+    "precio": 43500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "42",
+    "nombre": "Amapola 1/2",
+    "precio": 67700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "43",
+    "nombre": "Amapola Libra",
+    "precio": 117400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "44",
+    "nombre": "Pastel Pollo",
+    "precio": 7200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "45",
+    "nombre": "Pastel Carne",
+    "precio": 8500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "46",
+    "nombre": "Pastel Hawaiano",
+    "precio": 6900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "47",
+    "nombre": "Croissant J y Q",
+    "precio": 5300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "48",
+    "nombre": "Croissant B y Q",
+    "precio": 5100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "49",
+    "nombre": "Croissant Almendra",
+    "precio": 8300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "50",
+    "nombre": "Palito Campesino",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "51",
+    "nombre": "Palito Bebe",
+    "precio": 2600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "52",
+    "nombre": "Cochinitos",
+    "precio": 7200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "53",
+    "nombre": "Arepa de Queso",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "54",
+    "nombre": "Buñuelos",
+    "precio": 2200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "55",
+    "nombre": "Pan de Bono",
+    "precio": 2200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "56",
+    "nombre": "Empanadas",
+    "precio": 1800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "57",
+    "nombre": "Pie Jamón y Queso",
+    "precio": 3900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "58",
+    "nombre": "Pie de Pollo",
+    "precio": 3900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "59",
+    "nombre": "Volovan Peq",
+    "precio": 1600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "60",
+    "nombre": "Volovan Grd",
+    "precio": 2200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "61",
+    "nombre": "Sandwich J y Q",
+    "precio": 8700,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "62",
+    "nombre": "Pastel Gloria",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "63",
+    "nombre": "Gaseosa",
+    "precio": 4800,
+    "codigo": "",
+    "categoria": "Bebida fría",
+    "descripcion": ""
+  },
+  {
+    "id": "64",
+    "nombre": "Ginger",
+    "precio": 4800,
+    "codigo": "",
+    "categoria": "Bebida fría",
+    "descripcion": ""
+  },
+  {
+    "id": "65",
+    "nombre": "Soda",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Bebida fría",
+    "descripcion": ""
+  },
+  {
+    "id": "66",
+    "nombre": "Pie Completo",
+    "precio": 59800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "67",
+    "nombre": "Milhoja Compl",
+    "precio": 32000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "68",
+    "nombre": "Esponjado Compl",
+    "precio": 38000,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "69",
+    "nombre": "Tartaleta Compl",
+    "precio": 30000,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "70",
+    "nombre": "Mantecada Compl",
+    "precio": 18000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "71",
+    "nombre": "Brazo de Reina Gra",
+    "precio": 25000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "72",
+    "nombre": "Brazo de Reina Peq",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "73",
+    "nombre": "Huevos Revueltos",
+    "precio": 9800,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "74",
+    "nombre": "Pulpas de Fruta",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "75",
+    "nombre": "Vasos Tinto",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "76",
+    "nombre": "Leche Deslactosada",
+    "precio": 0,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "77",
+    "nombre": "Kumis",
+    "precio": 7100,
+    "codigo": "",
+    "categoria": "Bebida fría",
+    "descripcion": ""
+  },
+  {
+    "id": "78",
+    "nombre": "Sandwich J y P",
+    "precio": 6500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "79",
+    "nombre": "Vaso de café",
+    "precio": 6400,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "80",
+    "nombre": "Yogurt",
+    "precio": 7100,
+    "codigo": "",
+    "categoria": "Bebida fría",
+    "descripcion": ""
+  },
+  {
+    "id": "81",
+    "nombre": "Bizcocho Fruta",
+    "precio": 6400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "82",
+    "nombre": "Choco Fresa",
+    "precio": 6100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "83",
+    "nombre": "Rollo Choconuez",
+    "precio": 8100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "84",
+    "nombre": "Rollo Fruta",
+    "precio": 6100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "85",
+    "nombre": "Pirámide",
+    "precio": 6400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "86",
+    "nombre": "Porción Ciruela",
+    "precio": 7600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "87",
+    "nombre": "Porción Ponqué",
+    "precio": 8900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "88",
+    "nombre": "Cup Cake",
+    "precio": 4000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "89",
+    "nombre": "Milhoja Rectangular",
+    "precio": 7400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "90",
+    "nombre": "Milhoja Triángulo",
+    "precio": 7200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "91",
+    "nombre": "Milhoja Artesanal",
+    "precio": 7200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "92",
+    "nombre": "Merengón",
+    "precio": 7600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "93",
+    "nombre": "Tartaleta",
+    "precio": 6800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "94",
+    "nombre": "Cheese Cake",
+    "precio": 5900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "95",
+    "nombre": "Leche Asada",
+    "precio": 5800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "96",
+    "nombre": "Leche Francesa",
+    "precio": 7000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "97",
+    "nombre": "Borrachito",
+    "precio": 6800,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "98",
+    "nombre": "Esponjado Porción",
+    "precio": 6900,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "99",
+    "nombre": "Pie Melocotón",
+    "precio": 6900,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "100",
+    "nombre": "Pie Manzana",
+    "precio": 6900,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "101",
+    "nombre": "Nidito de Amor",
+    "precio": 7200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "102",
+    "nombre": "Cake Porción",
+    "precio": 7000,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "103",
+    "nombre": "Amapola Porción",
+    "precio": 8100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "104",
+    "nombre": "Selva Negra Porción",
+    "precio": 8600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "105",
+    "nombre": "Porción 3 Leches",
+    "precio": 7600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "106",
+    "nombre": "Pie Limón",
+    "precio": 6600,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "107",
+    "nombre": "P Artesanal",
+    "precio": 6600,
+    "codigo": "",
+    "categoria": "Postres",
+    "descripcion": ""
+  },
+  {
+    "id": "108",
+    "nombre": "Galleta Choco Chips",
+    "precio": 3100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "109",
+    "nombre": "Galleta Avena",
+    "precio": 3100,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "110",
+    "nombre": "Coquitas",
+    "precio": 3200,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "111",
+    "nombre": "Palmeras",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "112",
+    "nombre": "Delicias",
+    "precio": 5900,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "113",
+    "nombre": "Mantecada Pequeña",
+    "precio": 10600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "114",
+    "nombre": "Mantecada Grande",
+    "precio": 29600,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "115",
+    "nombre": "Milo Frío",
+    "precio": 7300,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "116",
+    "nombre": "Milo Caliente",
+    "precio": 6800,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  }
 ]
