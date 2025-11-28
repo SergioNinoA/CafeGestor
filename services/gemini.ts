@@ -1,16 +1,10 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { CategoriaProducto, SuggestionResponse } from "../types";
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generarDatosProducto = async (nombreProducto: string): Promise<SuggestionResponse | null> => {
   try {
-    if (!apiKey) {
-      console.warn("API Key no configurada");
-      return null;
-    }
-
     const prompt = `Genera datos realistas para un producto de cafetería llamado "${nombreProducto}". 
     Estima un precio en USD, inventa un código de producto corto (ej: CAF-01) y una descripción breve y apetitosa en español.
     Clasifícalo en una de las siguientes categorías: Café, Pastelería, Bebida Fría, Sándwich, Otro.`;
