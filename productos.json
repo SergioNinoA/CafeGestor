@@ -10,7 +10,7 @@
   {
     "id": "2",
     "nombre": "Cappuccino",
-    "precio": 0,
+    "precio": 7500,
     "codigo": "",
     "categoria": "Café",
     "descripcion": "Espresso con leche vaporizada y espuma"
@@ -18,15 +18,15 @@
   {
     "id": "3",
     "nombre": "Latte",
-    "precio": 0,
+    "precio": 8100,
     "codigo": "",
     "categoria": "Café",
     "descripcion": ""
   },
   {
     "id": "4",
-    "nombre": "Jugo de Naranja",
-    "precio": 0,
+    "nombre": "Jugo de Naranja o Mandarina",
+    "precio": 9800,
     "codigo": "",
     "categoria": "Bebida Fría",
     "descripcion": "Jugo natural exprimido al momento"
@@ -122,7 +122,7 @@
   {
     "id": "17",
     "nombre": "Ciruela 1/2",
-    "precio": 98400,
+    "precio": 98900,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -162,7 +162,7 @@
   {
     "id": "22",
     "nombre": "Tres Leches 1/2",
-    "precio": 64700,
+    "precio": 74700,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -298,7 +298,7 @@
   {
     "id": "39",
     "nombre": "Cake Chocolate 1 LB",
-    "precio": 120400,
+    "precio": 120900,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -492,15 +492,15 @@
     "nombre": "Gaseosa",
     "precio": 4800,
     "codigo": "",
-    "categoria": "Bebida fría",
+    "categoria": "Bebida Fría",
     "descripcion": ""
   },
   {
     "id": "64",
-    "nombre": "Ginger",
+    "nombre": "Ginger, Quatro, Sprite",
     "precio": 4800,
     "codigo": "",
-    "categoria": "Bebida fría",
+    "categoria": "Bebida Fría",
     "descripcion": ""
   },
   {
@@ -508,7 +508,7 @@
     "nombre": "Soda",
     "precio": 4400,
     "codigo": "",
-    "categoria": "Bebida fría",
+    "categoria": "Bebida Fría",
     "descripcion": ""
   },
   {
@@ -554,7 +554,7 @@
   {
     "id": "71",
     "nombre": "Brazo de Reina Gra",
-    "precio": 25000,
+    "precio": 47400,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -562,7 +562,7 @@
   {
     "id": "72",
     "nombre": "Brazo de Reina Peq",
-    "precio": 0,
+    "precio": 26600,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -604,13 +604,13 @@
     "nombre": "Kumis",
     "precio": 7100,
     "codigo": "",
-    "categoria": "Bebida fría",
+    "categoria": "Bebida Fría",
     "descripcion": ""
   },
   {
     "id": "78",
     "nombre": "Sándwich J y P",
-    "precio": 6500,
+    "precio": 22600,
     "codigo": "",
     "categoria": "Sándwich",
     "descripcion": ""
@@ -628,7 +628,7 @@
     "nombre": "Yogurt",
     "precio": 7100,
     "codigo": "",
-    "categoria": "Bebida fría",
+    "categoria": "Bebida Fría",
     "descripcion": ""
   },
   {
@@ -706,7 +706,7 @@
   {
     "id": "90",
     "nombre": "Milhoja Triángulo",
-    "precio": 7200,
+    "precio": 4000,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -724,7 +724,7 @@
     "nombre": "Merengón",
     "precio": 7600,
     "codigo": "",
-    "categoria": "Pastelería",
+    "categoria": "Otro",
     "descripcion": ""
   },
   {
@@ -770,9 +770,9 @@
   {
     "id": "98",
     "nombre": "Esponjado Porción",
-    "precio": 6900,
+    "precio": 3800,
     "codigo": "",
-    "categoria": "Postres",
+    "categoria": "Otro",
     "descripcion": ""
   },
   {
@@ -780,7 +780,7 @@
     "nombre": "Pie Melocotón",
     "precio": 6900,
     "codigo": "",
-    "categoria": "Postres",
+    "categoria": "Otro",
     "descripcion": ""
   },
   {
@@ -788,13 +788,13 @@
     "nombre": "Pie Manzana",
     "precio": 6900,
     "codigo": "",
-    "categoria": "Postres",
+    "categoria": "Otro",
     "descripcion": ""
   },
   {
     "id": "101",
     "nombre": "Nidito de Amor",
-    "precio": 7200,
+    "precio": 5300,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -802,7 +802,7 @@
   {
     "id": "102",
     "nombre": "Cake Porción",
-    "precio": 7000,
+    "precio": 7200,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -810,7 +810,7 @@
   {
     "id": "103",
     "nombre": "Amapola Porción",
-    "precio": 8100,
+    "precio": 7000,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -818,7 +818,7 @@
   {
     "id": "104",
     "nombre": "Selva Negra Porción",
-    "precio": 8600,
+    "precio": 8100,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -826,7 +826,7 @@
   {
     "id": "105",
     "nombre": "Porción 3 Leches",
-    "precio": 7600,
+    "precio": 8600,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -834,14 +834,14 @@
   {
     "id": "106",
     "nombre": "Pie Limón",
-    "precio": 6600,
+    "precio": 7400,
     "codigo": "",
-    "categoria": "Postres",
+    "categoria": "Otro",
     "descripcion": ""
   },
   {
     "id": "107",
-    "nombre": "P Artesanal",
+    "nombre": "Pie Artesanal",
     "precio": 6600,
     "codigo": "",
     "categoria": "Postres",
@@ -890,7 +890,7 @@
   {
     "id": "113",
     "nombre": "Mantecada Pequeña",
-    "precio": 10600,
+    "precio": 18600,
     "codigo": "",
     "categoria": "Pastelería",
     "descripcion": ""
@@ -917,6 +917,446 @@
     "precio": 6800,
     "codigo": "",
     "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "117",
+    "nombre": "Postre Plato",
+    "precio": 3800,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "118",
+    "nombre": "Brownie",
+    "precio": 3400,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "119",
+    "nombre": "Postre semifrío",
+    "precio": 7500,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "120",
+    "nombre": "Mousse especial",
+    "precio": 8000,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "121",
+    "nombre": "Canasta chocolate",
+    "precio": 4500,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "122",
+    "nombre": "Postre Nutella",
+    "precio": 4500,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "123",
+    "nombre": "Postre tiramisú",
+    "precio": 6600,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "124",
+    "nombre": "Mousse copa",
+    "precio": 3800,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "125",
+    "nombre": "Alfajor",
+    "precio": 1600,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "126",
+    "nombre": "Galleta Visconti",
+    "precio": 3500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "127",
+    "nombre": "Mariposa",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "128",
+    "nombre": "Corazón",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "129",
+    "nombre": "Rollo de cuajada",
+    "precio": 4500,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "130",
+    "nombre": "Porción de Mantecada",
+    "precio": 4500,
+    "codigo": "",
+    "categoria": "Pastelería",
+    "descripcion": ""
+  },
+  {
+    "id": "131",
+    "nombre": "Kumix",
+    "precio": 7500,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "132",
+    "nombre": "Arepa Integral",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "133",
+    "nombre": "Botella de Agua",
+    "precio": 3200,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "134",
+    "nombre": "Jugo en leche",
+    "precio": 9400,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": "Mora, fresa, mango, lulo, guanábana, maracuyá"
+  },
+  {
+    "id": "135",
+    "nombre": "Jugo en Agua",
+    "precio": 8700,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": "Mora, fresa, mango, lulo, guanábana, maracuyá"
+  },
+  {
+    "id": "136",
+    "nombre": "Yogurt 2",
+    "precio": 8600,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "137",
+    "nombre": "Aromática Hierbas",
+    "precio": 4300,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "138",
+    "nombre": "Omelet de la granja",
+    "precio": 16400,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Pollo y Maíz"
+  },
+  {
+    "id": "139",
+    "nombre": "Omelet Ranchero",
+    "precio": 16400,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Salchicha y queso doble crema"
+  },
+  {
+    "id": "140",
+    "nombre": "Omelet español",
+    "precio": 16400,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Papa cocida, cebolla y chorizo"
+  },
+  {
+    "id": "141",
+    "nombre": "Cazuela Boyacense",
+    "precio": 14900,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Huevo, almohabana, queso doble crema, cebolla, cilantro"
+  },
+  {
+    "id": "142",
+    "nombre": "Caldo",
+    "precio": 13100,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Papa, carne, cebolla, cilantro"
+  },
+  {
+    "id": "143",
+    "nombre": "Huevo ranchero",
+    "precio": 16000,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "144",
+    "nombre": "Huevos fritos",
+    "precio": 9800,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "145",
+    "nombre": "Desayuno Americano",
+    "precio": 18900,
+    "codigo": "",
+    "categoria": "Otro",
+    "descripcion": "Huevos al gusto, pan, jugo de naranja y bebida caliente"
+  },
+  {
+    "id": "146",
+    "nombre": "Aromática Mixta",
+    "precio": 4700,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "147",
+    "nombre": "Valeriana",
+    "precio": 4400,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "148",
+    "nombre": "Chocolate Bebida",
+    "precio": 5700,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "149",
+    "nombre": "Té en leche",
+    "precio": 9800,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "150",
+    "nombre": "Té chai",
+    "precio": 6800,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "151",
+    "nombre": "Aguapanela con Queso",
+    "precio": 6800,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "152",
+    "nombre": "Café Americano doble",
+    "precio": 8400,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "153",
+    "nombre": "Perico",
+    "precio": 4600,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "154",
+    "nombre": "Cappuccino Baileys",
+    "precio": 10500,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "155",
+    "nombre": "Cappuccino Amaretto",
+    "precio": 10500,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "156",
+    "nombre": "Mocha",
+    "precio": 8300,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "157",
+    "nombre": "Machiato",
+    "precio": 9000,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "158",
+    "nombre": "Machiato",
+    "precio": 8400,
+    "codigo": "",
+    "categoria": "Café",
+    "descripcion": ""
+  },
+  {
+    "id": "159",
+    "nombre": "Frappe",
+    "precio": 10500,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": "Piña, maracuyá, jengibre y yerba buena, fresa, mora, mango"
+  },
+  {
+    "id": "160",
+    "nombre": "Granizado de fruta",
+    "precio": 9400,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": "Mora, fresa, mango, lulo, guanábana, maracuyá, mandarina, café"
+  },
+  {
+    "id": "161",
+    "nombre": "Té chai frío",
+    "precio": 9800,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "162",
+    "nombre": "Limonada natural",
+    "precio": 5400,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "163",
+    "nombre": "Limonada",
+    "precio": 8400,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "164",
+    "nombre": "Café expresso frío",
+    "precio": 4600,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "165",
+    "nombre": "Latte frío",
+    "precio": 7000,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "166",
+    "nombre": "Soda italiana",
+    "precio": 10300,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "167",
+    "nombre": "Limonada cerezada",
+    "precio": 7000,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "168",
+    "nombre": "Parfait",
+    "precio": 18600,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "169",
+    "nombre": "Vaso de leche fría",
+    "precio": 4600,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "170",
+    "nombre": "Vaso de leche fría",
+    "precio": 18600,
+    "codigo": "",
+    "categoria": "Bebida Fría",
+    "descripcion": ""
+  },
+  {
+    "id": "171",
+    "nombre": "Menú del día",
+    "precio": 26300,
+    "codigo": "",
+    "categoria": "Otro",
     "descripcion": ""
   }
 ]
