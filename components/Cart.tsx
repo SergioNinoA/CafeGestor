@@ -1,5 +1,5 @@
-import React from 'react';
-import { Trash2, ShoppingBag, Minus, Plus } from 'lucide-react';
+import React, { useState } from 'react';
+import { Trash2, ShoppingBag, Minus, Plus, Calculator, Banknote } from 'lucide-react';
 import { ItemCarrito } from '../types';
 
 interface CartProps {
@@ -10,11 +10,38 @@ interface CartProps {
 }
 
 const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear }) => {
+  const [pago, setPago] = useState('');
+
   const total = items.reduce((acc, item) => acc + (item.producto.precio * item.cantidad), 0);
+  const montoPago = parseFloat(pago) || 0;
+  const cambio = montoPago - total;
 
   // Función auxiliar para formatear precios inteligentemente
   const formatPrice = (price: number) => {
     return price.toLocaleString('es-CO', { maximumFractionDigits: 2 });
+  };
+
+  const handleCobrar = () => {
+    if (items.length === 0) return;
+
+    if (montoPago === 0) {
+      if(window.confirm(`Total a cobrar: $${formatPrice(total)}\n\n¿Deseas registrar la venta sin calcular cambio?`)){
+         onClear();
+         setPago('');
+      }
+      return;
+    }
+
+    if (cambio < 0) {
+      alert(`⚠️ Falta dinero.\n\nEl cliente debe pagar $${formatPrice(Math.abs(cambio))} más.`);
+      return;
+    }
+
+    // Confirmación final con el cambio
+    if (window.confirm(`✅ Venta Exitosa\n\nTotal: $${formatPrice(total)}\nPagado: $${formatPrice(montoPago)}\n\n--------------------------------\nCAMBIO A DEVOLVER: $${formatPrice(cambio)}\n--------------------------------\n\n¿Finalizar y limpiar pedido?`)) {
+      onClear();
+      setPago('');
+    }
   };
 
   if (items.length === 0) {
@@ -85,21 +112,54 @@ const Cart: React.FC<CartProps> = ({ items, onRemove, onUpdateQuantity, onClear 
         ))}
       </div>
 
-      <div className="p-4 bg-slate-900 text-white">
+      <div className="p-4 bg-slate-900 text-white shadow-inner-lg">
         <div className="flex justify-between items-center mb-1 text-slate-300 text-sm">
           <span>Subtotal</span>
           <span>${formatPrice(total)}</span>
         </div>
-        <div className="flex justify-between items-center mb-4 text-slate-300 text-sm">
-          <span>Impuestos (0%)</span>
-          <span>$0</span>
+        
+        {/* Input de Pago */}
+        <div className="flex justify-between items-center mt-3 mb-2">
+          <label htmlFor="inputPago" className="flex items-center text-amber-400 text-sm font-medium">
+            <Calculator size={16} className="mr-2" />
+            Paga con:
+          </label>
+          <div className="relative">
+            <span className="absolute left-2 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+            <input
+              id="inputPago"
+              type="number"
+              value={pago}
+              onChange={(e) => setPago(e.target.value)}
+              placeholder="0"
+              className="w-32 bg-slate-800 border border-slate-700 rounded-lg py-1 pl-6 pr-2 text-right text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+            />
+          </div>
         </div>
-        <div className="flex justify-between items-center pt-4 border-t border-slate-700">
+
+        {/* Sección de Cambio / Vueltas */}
+        <div className={`flex justify-between items-center py-2 border-t border-slate-700 transition-all ${montoPago > 0 ? 'opacity-100' : 'opacity-50'}`}>
+          <span className="text-sm font-medium text-slate-300">Cambio / Vueltas</span>
+          <span className={`text-xl font-bold ${cambio >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+            ${formatPrice(cambio)}
+          </span>
+        </div>
+
+        <div className="flex justify-between items-center pt-2 mt-2 border-t border-slate-600">
           <span className="text-lg font-bold">Total a Pagar</span>
           <span className="text-2xl font-bold text-amber-400">${formatPrice(total)}</span>
         </div>
-        <button className="w-full mt-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold py-3 px-4 rounded-lg transition-colors">
-          Cobrar Pedido
+
+        <button 
+          onClick={handleCobrar}
+          className={`w-full mt-4 font-bold py-3 px-4 rounded-lg transition-all flex justify-center items-center ${
+            montoPago > 0 && cambio >= 0
+              ? 'bg-green-600 hover:bg-green-700 text-white shadow-[0_0_15px_rgba(22,163,74,0.5)]'
+              : 'bg-amber-500 hover:bg-amber-600 text-slate-900'
+          }`}
+        >
+          <Banknote className="mr-2" size={20} />
+          {montoPago > 0 && cambio >= 0 ? 'Finalizar Venta' : 'Cobrar Pedido'}
         </button>
       </div>
     </div>
