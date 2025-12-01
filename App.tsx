@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Plus, Coffee, LayoutGrid, List, Download, Upload, FileJson, FileSpreadsheet } from 'lucide-react';
+import { Search, Plus, Coffee, LayoutGrid, List, Download, Upload, FileJson, FileSpreadsheet, X } from 'lucide-react';
 import ProductCard from './components/ProductCard';
 import Cart from './components/Cart';
 import ProductForm from './components/ProductForm';
@@ -268,169 +268,135 @@ const App: React.FC = () => {
       <header className="bg-slate-900 text-white shadow-lg sticky top-0 z-30 pt-safe">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="bg-amber-500 p-2 rounded-lg text-slate-900">
-              <Coffee size={24} strokeWidth={2.5} />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold leading-none">CaféGestor</h1>
-              <p className="text-xs text-slate-400">Punto de Venta</p>
-            </div>
+            <Coffee className="text-amber-400" size={28} />
+            <h1 className="text-xl font-bold tracking-tight">CaféGestor</h1>
           </div>
-          
-          <div className="flex items-center gap-2">
-            <div className="hidden md:flex items-center bg-slate-800 rounded-lg p-1 mr-2">
-              <button 
-                onClick={() => exportarDatos('json')} 
-                className="p-2 hover:bg-slate-700 rounded text-slate-300 hover:text-amber-400 transition-colors"
-                title="Descargar respaldo JSON"
-              >
-                <FileJson size={18} />
-              </button>
-              <button 
-                onClick={() => exportarDatos('csv')} 
-                className="p-2 hover:bg-slate-700 rounded text-slate-300 hover:text-green-400 transition-colors"
-                title="Descargar Excel/CSV"
-              >
-                <FileSpreadsheet size={18} />
-              </button>
-              <div className="w-px h-4 bg-slate-600 mx-1"></div>
-              <button 
-                onClick={triggerImportar} 
-                className="p-2 hover:bg-slate-700 rounded text-slate-300 hover:text-blue-400 transition-colors"
-                title="Importar archivo"
-              >
-                <Upload size={18} />
-              </button>
-              <input 
-                type="file" 
-                ref={fileInputRef} 
-                onChange={manejarImportacion} 
-                accept=".json,.csv" 
-                className="hidden" 
-              />
-            </div>
-
+          <div className="flex items-center space-x-2">
+             <div className="hidden md:flex space-x-2 mr-2">
+                <button onClick={() => exportarDatos('json')} title="Exportar JSON" className="p-2 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-white"><FileJson size={20}/></button>
+                <button onClick={() => exportarDatos('csv')} title="Exportar CSV" className="p-2 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-white"><FileSpreadsheet size={20}/></button>
+                <button onClick={triggerImportar} title="Importar" className="p-2 hover:bg-slate-800 rounded-lg text-slate-300 hover:text-white"><Upload size={20}/></button>
+             </div>
             <button 
-              className="md:hidden relative p-2"
-              onClick={() => setActiveTab(activeTab === 'menu' ? 'cart' : 'menu')}
+              onClick={abrirNuevoProducto}
+              className="bg-amber-500 hover:bg-amber-600 text-slate-900 p-2 rounded-lg transition-colors active:scale-95"
             >
-              <div className="absolute -top-1 -right-1 bg-amber-500 text-slate-900 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
-                {cantidadTotalCarrito}
-              </div>
-              {activeTab === 'menu' ? <LayoutGrid size={24} /> : <List size={24} />}
+              <Plus size={24} />
             </button>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4 pb-4">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Buscar por nombre o código..."
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+              className="w-full pl-10 pr-10 p-3 rounded-lg text-slate-900 focus:ring-2 focus:ring-amber-500 outline-none shadow-sm"
+            />
+            <Search className="absolute left-3 top-3.5 text-slate-400" size={20} />
+            {busqueda && (
+              <button
+                onClick={() => setBusqueda('')}
+                className="absolute right-3 top-3.5 text-slate-400 hover:text-slate-600 transition-colors"
+                title="Borrar búsqueda"
+              >
+                <X size={20} />
+              </button>
+            )}
+          </div>
+
+          <div className="flex space-x-2 overflow-x-auto pb-2 mt-4 scrollbar-hide">
+            {['Todos', ...Object.values(CategoriaProducto)].map(cat => (
+              <button
+                key={cat}
+                onClick={() => setFiltroCategoria(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+                  filtroCategoria === cat 
+                    ? 'bg-amber-500 text-slate-900' 
+                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
       </header>
 
-      <main className="flex-1 container mx-auto px-4 py-6 md:flex gap-6 overflow-hidden">
-        <section className={`flex-1 flex flex-col ${activeTab === 'cart' ? 'hidden md:flex' : 'flex'}`}>
-          <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-6 space-y-4 md:space-y-0 md:flex md:items-center md:justify-between sticky top-0 z-20">
-            <div className="relative flex-1 max-w-lg">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
-              <input 
-                type="text" 
-                placeholder="Buscar por nombre o código..." 
-                className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-amber-500 outline-none"
-                value={busqueda}
-                onChange={(e) => setBusqueda(e.target.value)}
-              />
-            </div>
-            
-            <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0 md:ml-4 hide-scrollbar">
-              <button 
-                onClick={() => setFiltroCategoria('Todos')}
-                className={`px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-colors ${filtroCategoria === 'Todos' ? 'bg-slate-800 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-              >
-                Todos
-              </button>
-              {Object.values(CategoriaProducto).map(cat => (
-                <button 
-                  key={cat}
-                  onClick={() => setFiltroCategoria(cat)}
-                  className={`px-3 py-1.5 rounded-full text-sm whitespace-nowrap transition-colors ${filtroCategoria === cat ? 'bg-slate-800 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+      {/* Tabs Móviles */}
+      <div className="md:hidden flex border-b border-slate-200 bg-white sticky top-[156px] z-20">
+        <button
+          onClick={() => setActiveTab('menu')}
+          className={`flex-1 py-3 text-sm font-medium flex justify-center items-center ${
+            activeTab === 'menu' ? 'text-amber-600 border-b-2 border-amber-600' : 'text-slate-500'
+          }`}
+        >
+          <LayoutGrid size={18} className="mr-2" />
+          Menú
+        </button>
+        <button
+          onClick={() => setActiveTab('cart')}
+          className={`flex-1 py-3 text-sm font-medium flex justify-center items-center ${
+            activeTab === 'cart' ? 'text-amber-600 border-b-2 border-amber-600' : 'text-slate-500'
+          }`}
+        >
+          <List size={18} className="mr-2" />
+          Pedido ({cantidadTotalCarrito})
+        </button>
+      </div>
 
-            <div className="flex gap-2">
-              <button 
-                onClick={triggerImportar}
-                className="md:hidden bg-slate-100 text-slate-700 p-2 rounded-lg"
-                title="Importar"
-              >
-                <Upload size={20} />
-              </button>
-              <button 
-                onClick={() => exportarDatos('csv')}
-                className="md:hidden bg-slate-100 text-slate-700 p-2 rounded-lg"
-                title="Exportar CSV"
-              >
-                <Download size={20} />
-              </button>
-
-              <button 
-                onClick={abrirNuevoProducto}
-                className="ml-auto bg-amber-500 hover:bg-amber-600 text-slate-900 px-4 py-2 rounded-lg font-semibold flex items-center shadow-sm hover:shadow active:scale-95 transition-all whitespace-nowrap"
-              >
-                <Plus size={20} className="mr-2" />
-                <span className="hidden sm:inline">Nuevo</span>
-                <span className="sm:hidden">Nuevo</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-20 md:pb-0 overflow-y-auto">
-            {productosFiltrados.length > 0 ? (
-              productosFiltrados.map(producto => (
-                <ProductCard 
-                  key={producto.id} 
-                  producto={producto} 
+      <main className="flex-1 container mx-auto px-4 py-6">
+        <div className="flex gap-6">
+          {/* Lista de Productos */}
+          <div className={`flex-1 ${activeTab === 'cart' ? 'hidden md:block' : ''}`}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {productosFiltrados.map((producto) => (
+                <ProductCard
+                  key={producto.id}
+                  producto={producto}
                   onAdd={agregarAlCarrito}
                   onEdit={prepararEdicion}
                   onDelete={eliminarProducto}
                 />
-              ))
-            ) : (
-              <div className="col-span-full text-center py-12 text-slate-400">
-                <Coffee size={48} className="mx-auto mb-4 opacity-20" />
-                <p>No se encontraron productos.</p>
-              </div>
-            )}
+              ))}
+              {productosFiltrados.length === 0 && (
+                <div className="col-span-full flex flex-col items-center justify-center py-10 text-slate-400">
+                  <Coffee size={48} className="mb-4 opacity-50" />
+                  <p>No se encontraron productos.</p>
+                </div>
+              )}
+            </div>
           </div>
-        </section>
 
-        <section className={`w-full md:w-96 lg:w-[400px] flex-shrink-0 ${activeTab === 'menu' ? 'hidden md:flex' : 'flex'}`}>
-          <div className="sticky top-24 w-full h-[calc(100vh-8rem)]">
-            <Cart 
-              items={carrito} 
-              onRemove={eliminarDelCarrito} 
-              onUpdateQuantity={actualizarCantidad}
-              onClear={limpiarCarrito}
-            />
+          {/* Carrito Lateral (Visible siempre en desktop, toggle en móvil) */}
+          <div className={`w-full md:w-96 ${activeTab === 'menu' ? 'hidden md:block' : ''}`}>
+            <div className="sticky top-24 h-[calc(100vh-8rem)]">
+              <Cart 
+                items={carrito} 
+                onRemove={eliminarDelCarrito} 
+                onUpdateQuantity={actualizarCantidad}
+                onClear={limpiarCarrito}
+              />
+            </div>
           </div>
-        </section>
+        </div>
       </main>
-
-      {activeTab === 'menu' && cantidadTotalCarrito > 0 && (
-        <button 
-          onClick={() => setActiveTab('cart')}
-          className="md:hidden fixed bottom-6 right-6 bg-slate-900 text-white p-4 rounded-full shadow-xl flex items-center justify-center z-40 animate-bounce-subtle"
-        >
-          <div className="absolute -top-1 -right-1 bg-amber-500 text-slate-900 text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white">
-            {cantidadTotalCarrito}
-          </div>
-          <List size={24} />
-        </button>
-      )}
 
       <ProductForm 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
         onSave={guardarProducto}
         productToEdit={productoAEditar}
+      />
+      
+      <input 
+        type="file" 
+        ref={fileInputRef} 
+        onChange={manejarImportacion} 
+        accept=".json,.csv" 
+        className="hidden" 
       />
     </div>
   );
