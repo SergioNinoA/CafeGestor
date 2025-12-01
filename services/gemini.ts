@@ -28,7 +28,7 @@ export const generarDatosProducto = async (nombreProducto: string): Promise<Sugg
 
     const prompt = `Genera datos realistas para un producto de cafetería llamado "${nombreProducto}". 
     Estima un precio en USD, inventa un código de producto corto (ej: CAF-01) y una descripción breve y apetitosa en español.
-    Clasifícalo en una de las siguientes categorías: Café, Pastelería, Bebida Fría, Sándwich, Otro.`;
+    Clasifícalo en una de las siguientes categorías: Café, Panadería, Pastelería, Bebida Fría, Sándwich, Otro.`;
 
     const responseSchema: Schema = {
       type: Type.OBJECT,

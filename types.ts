@@ -9,6 +9,7 @@ export interface Producto {
 
 export enum CategoriaProducto {
   CAFE = 'Café',
+  PANADERIA = 'Panadería',
   PASTELERIA = 'Pastelería',
   BEBIDA_FRIA = 'Bebida Fría',
   SANDWICH = 'Sándwich',

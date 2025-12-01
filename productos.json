@@ -617,7 +617,7 @@
   },
   {
     "id": "79",
-    "nombre": "Vaso de café",
+    "nombre": "Vaso de café con leche",
     "precio": 6400,
     "codigo": "",
     "categoria": "Café",
@@ -1357,6 +1357,326 @@
     "precio": 26300,
     "codigo": "",
     "categoria": "Otro",
+    "descripcion": ""
+  },
+  {
+    "id": "172",
+    "nombre": "Baguette",
+    "precio": 3300,
+    "codigo": "8",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "173",
+    "nombre": "Pan francés pequeño",
+    "precio": 500,
+    "codigo": "33",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "174",
+    "nombre": "Pan francés grande",
+    "precio": 1600,
+    "codigo": "32",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "175",
+    "nombre": "Pan francés aliñado",
+    "precio": 3500,
+    "codigo": "31",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "176",
+    "nombre": "Pan francés ajo",
+    "precio": 700,
+    "codigo": "100",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "177",
+    "nombre": "Pan rancho grande",
+    "precio": 1800,
+    "codigo": "47",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "178",
+    "nombre": "Pan hawaino",
+    "precio": 2800,
+    "codigo": "69",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "179",
+    "nombre": "Pan coco pequeño",
+    "precio": 600,
+    "codigo": "57",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "180",
+    "nombre": "Pan coco grande",
+    "precio": 1000,
+    "codigo": "56",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "181",
+    "nombre": "Pan mantequilla pequeño",
+    "precio": 600,
+    "codigo": "75",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "182",
+    "nombre": "Pan mantequilla mediano",
+    "precio": 1100,
+    "codigo": "42",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "183",
+    "nombre": "Pan mantequilla grande",
+    "precio": 2200,
+    "codigo": "41",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "184",
+    "nombre": "Pan superqueso pequeño",
+    "precio": 1800,
+    "codigo": "91",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "185",
+    "nombre": "Pan superqueso grande",
+    "precio": 3200,
+    "codigo": "90",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "186",
+    "nombre": "Pan integral oliva",
+    "precio": 1500,
+    "codigo": "36",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "187",
+    "nombre": "Pan maíz pequeño",
+    "precio": 1200,
+    "codigo": "71",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "188",
+    "nombre": "Pan maíz grande",
+    "precio": 2500,
+    "codigo": "75",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "189",
+    "nombre": "Pan mestiza pequeña",
+    "precio": 700,
+    "codigo": "44",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "190",
+    "nombre": "Pan mestiza grande",
+    "precio": 1000,
+    "codigo": "45",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "191",
+    "nombre": "Pan mestiza chicharrona",
+    "precio": 2400,
+    "codigo": "17",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "192",
+    "nombre": "Pan model integral",
+    "precio": 7000,
+    "codigo": "49",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "193",
+    "nombre": "Pan model aliñado",
+    "precio": 9000,
+    "codigo": "48",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "194",
+    "nombre": "Pan trenza pequeña",
+    "precio": 5200,
+    "codigo": "94",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "195",
+    "nombre": "Pan trenza grande",
+    "precio": 10500,
+    "codigo": "96",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "196",
+    "nombre": "Pan relleno",
+    "precio": 8400,
+    "codigo": "78",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "197",
+    "nombre": "Pan tres semillas",
+    "precio": 3400,
+    "codigo": "1",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "198",
+    "nombre": "Pan seis granos",
+    "precio": 5400,
+    "codigo": "2",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "199",
+    "nombre": "Pan siete granos",
+    "precio": 6200,
+    "codigo": "5",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "200",
+    "nombre": "Pan coco miel",
+    "precio": 6200,
+    "codigo": "19",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "201",
+    "nombre": "Pan energetico",
+    "precio": 1800,
+    "codigo": "23",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "202",
+    "nombre": "Pan ajo italiano",
+    "precio": 3100,
+    "codigo": "3",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "203",
+    "nombre": "Pan focaccia",
+    "precio": 7200,
+    "codigo": "27",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "204",
+    "nombre": "Pan chocolate",
+    "precio": 4300,
+    "codigo": "64",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "205",
+    "nombre": "Panecillo",
+    "precio": 7600,
+    "codigo": "81",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "206",
+    "nombre": "Caladitos",
+    "precio": 4400,
+    "codigo": "15",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "207",
+    "nombre": "Palitos ajonjolí",
+    "precio": 5500,
+    "codigo": "236",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "208",
+    "nombre": "Pan preffou",
+    "precio": 7200,
+    "codigo": "84",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "209",
+    "nombre": "Pan carno",
+    "precio": 5200,
+    "codigo": "63",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "210",
+    "nombre": "Pan ciabatta",
+    "precio": 3500,
+    "codigo": "6",
+    "categoria": "Panadería",
+    "descripcion": ""
+  },
+  {
+    "id": "211",
+    "nombre": "Pan f campesino",
+    "precio": 3500,
+    "codigo": "16",
+    "categoria": "Panadería",
     "descripcion": ""
   }
 ]
